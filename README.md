@@ -37,9 +37,9 @@ python main.py
 - Check if there is no dupulacation from 1 to 9 in each col
 - Check if there is no dupulacation from 1 to 9 in each 3x3 square
 ### Responsibility:
-- Find the position of unassigned number
-- Try to fill the number from 1 to 9 to the position to see if match the [rules](###Rules) listed previously. 
-- Recursively run the second step until there is no unassigned number in return which means the puzzle solved
+- Find the position of an unassigned slot
+- Try to fill the slot with number from 1 to 9 to see if that matchs all the [rules](###Rules) listed previously. 
+- Recursively run the second step until there is no unassigned slot position in return which also means the puzzle solved
 
 ## Reference
 - https://www.youtube.com/watch?v=auK3PSZoidc
