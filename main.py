@@ -1,7 +1,7 @@
 
 import time
 import csv
-from sudoku import Solution
+from sudoku import Sudoku
 
 # load 2d array from csv
 with open('input.csv', newline='') as csvfile:
@@ -13,9 +13,8 @@ with open('input.csv', newline='') as csvfile:
 tStart = time.time() # time start 
 
 # init Solution class
-a = Solution()
-a.solveSudoku(board)
-a.report()
+s = Sudoku()
+s.solveSudoku(board)
 
 tEnd = time.time() # time end 
 print("Total time= %f seconds" % (tEnd - tStart))

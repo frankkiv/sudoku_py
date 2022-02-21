@@ -1,10 +1,11 @@
-class Solution:
+class Sudoku:
     # @param board, a 9x9 2D array
     # Solve the Sudoku by modifying the input board in-place.
     # Do not return any value.
     def solveSudoku(self, board):
         self.board = board
         self.solve()
+        self.report()
     
     # find the "." and return the position
     def findUnassigned(self):
