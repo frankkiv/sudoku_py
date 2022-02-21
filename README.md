@@ -3,8 +3,14 @@ Take notes of the sudoku solutions and also take a chance to practice python
 
 ## How to use 
 For now only allow for the 9x9 sudoku.
-Please copy your sudoku to input.csv file and split each digit by "," and leave the unassigned number to 0
-e.g.
+Please copy your sudoku to input.csv file and split each digit by "," and leave the unassigned number to 0.
+
+```python
+# how to run
+python main.py
+```
+
+### e.g. input.csv
 ```sh
 9,8,4,6,7,2,5,3,1
 0,0,7,0,0,0,6,4,9
@@ -15,11 +21,6 @@ e.g.
 0,3,2,0,0,7,4,9,6
 0,4,0,3,9,0,2,1,0
 0,9,0,0,0,0,0,5,3
-```
-
-```python
-# how to run
-python main.py
 ```
 ### Results
 ![sample image](./results/202202211046.jpg)
