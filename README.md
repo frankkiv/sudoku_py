@@ -1,17 +1,11 @@
 # Sudoku_py
-Take notes of the sudoku solutions and also take a chance to practice python
-
-## How to use 
+Take notes of the sudoku solutions and also practice python
 For now only allow for the 9x9 sudoku.
 
-Please copy your sudoku to input.csv file and split each digit by "," and leave the unassigned slot to 0.
+## How to use 
+Please copy your sudoku to input.csv file and __split each digit by "," and leave the unassigned slot to 0.__
 
-```python
-# how to run
-python main.py
-```
-
-### e.g. input.csv
+e.g. input.csv
 ```sh
 9,8,4,6,7,2,5,3,1
 0,0,7,0,0,0,6,4,9
@@ -23,15 +17,22 @@ python main.py
 0,4,0,3,9,0,2,1,0
 0,9,0,0,0,0,0,5,3
 ```
-### Results
+
+```python
+# how to run
+python main.py
+```
+
+Results
 ![sample image](./results/202202211046.jpg)
 
-
 ## Flow
-- Load input.csv from file and turn it to 2D array 
-- Init a Sudoku class
-- Invoke solveSudoku function with 2D array
-- Caculate the running time and results
+1. Load input.csv from file and turn it to 2D array 
+2. Init a Sudoku class
+3. Invoke solveSudoku function with 2D array
+4. Caculate the running time and results
+
+---
 
 ## Sudoku class
 ### Rules:
@@ -39,10 +40,12 @@ python main.py
 - Check if there is no dupulacation from 1 to 9 in each col
 - Check if there is no dupulacation from 1 to 9 in each 3x3 square
 ### Responsibility:
-- Find the position of an unassigned slot
-- Try to fill the slot with number from 1 to 9 to see if that matchs all the [rules](###Rules) listed previously. 
-- Recursively run the second step until there is no unassigned slot position in return which also means the puzzle solved
+1. Find the position of an unassigned slot
+2. Try to fill the slot with number from 1 to 9 to see if that matchs all the [rules](###Rules) listed previously. 
+3. Recursively run the second step until there is no unassigned slot position in return which also means the puzzle solved
+4. Format the solved board and print it out
 
+----
 ## Reference
 - https://www.youtube.com/watch?v=auK3PSZoidc
 - https://leetcode.com/problems/sudoku-solver/discuss/15959/Accepted-Python-solution
