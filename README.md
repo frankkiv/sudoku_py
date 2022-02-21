@@ -29,10 +29,8 @@ Results
 ## Flow
 1. Load input.csv from file and turn it to 2D array 
 2. Init a Sudoku class
-3. Invoke solveSudoku function with 2D array
-4. Caculate the running time and results
-
----
+3. Invoke solveSudoku function with the input '2D array of numbers'
+4. Caculate the running time and display results
 
 ## Sudoku class
 ### Rules:
