@@ -3,7 +3,7 @@ Take notes of the sudoku solutions and also take a chance to practice python
 
 ## How to use 
 For now only allow for the 9x9 sudoku.
-Please copy your sudoku to input.csv file and split each digit by ","
+Please copy your sudoku to input.csv file and split each digit by "," and leave the unassigned number to 0
 e.g.
 ```sh
 9,8,4,6,7,2,5,3,1
@@ -29,13 +29,17 @@ python main.py
 - Load input.csv from file and turn it to 2D array 
 - Init a Sudoku class
 - Invoke solveSudoku function with 2D array
-- Caculate the running time
+- Caculate the running time and results
 
 ## Sudoku class
-### Responsibility:
+### Rules:
 - Check if there is no dupulacation from 1 to 9 in each row
 - Check if there is no dupulacation from 1 to 9 in each col
 - Check if there is no dupulacation from 1 to 9 in each 3x3 square
+### Responsibility:
+- Find the position of unassigned number
+- Try to fill the number from 1 to 9 to the position to see if match the [rules](###Rules) listed previously. 
+- Recursively run the second step until there is no unassigned number in return which means the puzzle solved
 
 ## Reference
 - https://www.youtube.com/watch?v=auK3PSZoidc
