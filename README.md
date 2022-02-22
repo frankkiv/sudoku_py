@@ -7,6 +7,7 @@ Take notes of the sudoku solutions and also practice python
 Please copy your sudoku to input.csv file and __split each digit by "," and leave the unassigned slot to 0.__
 
 e.g. input.csv
+
 ```sh
 9,8,4,6,7,2,5,3,1
 0,0,7,0,0,0,6,4,9
@@ -28,6 +29,7 @@ python -m unittest sudoku_test.py
 ```
 
 Results
+
 ![sample image](./results/202202211046.jpg)
 
 ## Flow
