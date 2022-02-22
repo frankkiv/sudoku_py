@@ -2,7 +2,7 @@
 import time
 import csv
 from sudoku import Sudoku
-
+from oneDimSolution import OneDimensionSudoku
 # load 2d array from csv
 with open('input.csv', newline='') as csvfile:
     board = []
@@ -15,6 +15,14 @@ tStart = time.time() # time start
 # init Solution class
 s = Sudoku()
 s.solveSudoku(board)
+
+# s = OneDimensionSudoku()
+# ans = s.solveSudoku(s.to1DList(board))
+# print(ans)
+# for a in ans:
+#     for i in range(9):
+#         print(a[i*9:i*9+9])
+#     print('---------------') #if there is more than one solution
 
 tEnd = time.time() # time end 
 print("Total time= %f seconds" % (tEnd - tStart))
