@@ -22,6 +22,9 @@ e.g. input.csv
 ```python
 # how to run
 python main.py
+
+# how to run unittest
+python -m unittest sudoku_test.py
 ```
 
 Results

@@ -20,7 +20,7 @@ class Sudoku:
         # no unassigned position is found, puzzle solved
         if row == -1 and col == -1:
             return True
-        
+
         # loop number from 1 to 9
         for num in [1,2,3,4,5,6,7,8,9]:
             # for each number check if it's safe or not
