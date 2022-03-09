@@ -49,6 +49,13 @@ Results
 3. Recursively run the second step until there is no unassigned slot position in return which also means the puzzle solved
 4. Format the solved board and print it out
 
+## Add genRandomBoard Method 
+- Generate 9x9 2D array with default value 0
+- Random pick a column
+- Fill the random non-repetitive number from 1 to 9
+- Call solve the board
+- Pick random position and purge the number to 0
+
 # Reference
 - https://www.youtube.com/watch?v=auK3PSZoidc
 - https://leetcode.com/problems/sudoku-solver/discuss/15959/Accepted-Python-solution
