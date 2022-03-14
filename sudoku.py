@@ -41,7 +41,6 @@ class Sudoku:
         # box row/col is to caculate the box position
         boxrow = row - row % 3
         boxcol = col - col % 3
-        print(self.checkrow(row, ch),self.checkcol(col, ch) , self.checksquare(boxrow, boxcol, ch))
         if self.checkrow(row, ch) and self.checkcol(col, ch) and self.checksquare(boxrow, boxcol, ch):
             return True
         return False
@@ -49,7 +48,6 @@ class Sudoku:
     # check if the number already exist in the row
     def checkrow(self, row, ch):
         for col in range(9):
-            print(col, row, ch, self.board[row][col])
             if self.board[row][col] == ch:
                 return False
         return True
@@ -76,41 +74,33 @@ class Sudoku:
             print(a)
         print("---------------")
 
-    # check if the board is valid
-    def validateBoard(self):
-        # observe each number is safe
-        for row in range(9):
-            for col in range(9):
-                if self.board[row][col] == 0:
-                    print('0')
-                    continue
-                print(row, col, self.board[row][col], self.isSafe(row, col, self.board[row][col]))
-                if self.isSafe(row, col, self.board[row][col]):
-                    print('safe')
-                    return True
-                else:
-                    print('else')
-                    return False
-
 
     def genRandomBoard(self, unknown = 60):
-        isBoardValid = False
-        while isBoardValid is False:
-            # generate 9x9 2D array with default value 0
-            board = []
-            for i in range(1, 10):
-                board.append([0 for j in range(1, 10)])
+        def validate(board):
+            for row in range(9):
+                if (board[0][row] == board[6][row] ):
+                    return False
+            return True
 
+        # generate 9x9 2D array with default value 0
+        board = []
+        for i in range(1, 10):
+            board.append([0 for j in range(1, 10)])
+        
+        isBoardValid = False
+        while isBoardValid != True:          
             # fill the random non-repetitive number from 1 to 9 in th (i,i) 
             numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
             board[0] = random.sample(numbers, len(numbers))
             board[6] = random.sample(numbers, len(numbers))
-            self.board = board
-            self.report()
-            print( self.validateBoard())
-            isBoardValid = self.validateBoard()
 
+            # check if there is no repeat numbers
+            isBoardValid = validate(board)
+
+        
+        self.board = board
         # call solve the board
+        self.solve()
 
 
         # pick random position and purge the number to 0
